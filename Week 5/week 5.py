@@ -10,7 +10,6 @@ print('Retrieved', len(data), 'characters')
 tree = ET.fromstring(data)
 count = 0
 total = 0
-#for comment in comments.findall('comment'):
 for comments in tree.findall('comments/comment'):
     total += int(comments.find('count').text)
     count = count + 1
